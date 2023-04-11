@@ -1,4 +1,5 @@
 function isPalindrome(inputString) {
+  // Source: Reverse a string: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
   const reversedString = inputString.split('').reverse().join('');
   return inputString === reversedString;
 }
@@ -13,7 +14,6 @@ function handleInput() {
       document.getElementById('answer').textContent = 'A valid number is required!';
       document.getElementById('answer').style.color = 'red';
       document.getElementById('input').value = null;
-      // Reverse a string: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
     } else if (number < 0) {
       document.getElementById('answer').textContent = 'Negative numbers are not allowed!';
       document.getElementById('answer').style.color = 'red';
@@ -28,7 +28,7 @@ function handleInput() {
   }
 }
 
-function generatePalindromeCardStyle() {
+function formatDocumentStyles() {
   document.body.style.backgroundColor = 'blue';
   document.getElementById('palindrome-card').style.backgroundColor = 'white';
   document.getElementById('palindrome-card').style.padding = '25px';
@@ -40,6 +40,6 @@ function generatePalindromeCardStyle() {
   document.getElementById('input').style.display = 'flex';
 }
 
-generatePalindromeCardStyle();
+formatDocumentStyles();
 const elem = document.querySelector('input');
 elem.addEventListener('input', handleInput);

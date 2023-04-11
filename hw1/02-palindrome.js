@@ -1,8 +1,12 @@
+function isPalindrome(inputString) {
+  const reversedString = inputString.split('').reverse().join('');
+  return inputString === reversedString;
+}
+
 function handleInput() {
   document.getElementById('answer').textContent = '';
   if (document.getElementById('input').value !== '') {
-    const input = document.getElementById('input');
-    const numberAsString = input.value;
+    const numberAsString = document.getElementById('input').value;
     const number = Number(numberAsString);
 
     if (Number.isNaN(number)) {
@@ -11,10 +15,10 @@ function handleInput() {
       document.getElementById('input').value = null;
       // Reverse a string: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
     } else if (number < 0) {
-      document.getElementById('answer').textContent = 'negative numbers are not allowed!';
+      document.getElementById('answer').textContent = 'Negative numbers are not allowed!';
       document.getElementById('answer').style.color = 'red';
       document.getElementById('input').value = null;
-    } else if (numberAsString === numberAsString.split('').reverse().join('')) {
+    } else if (isPalindrome(numberAsString)) {
       document.getElementById('answer').textContent = 'Yes. This is a palindrome!';
       document.getElementById('answer').style.color = 'green';
     } else {

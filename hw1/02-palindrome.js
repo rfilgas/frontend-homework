@@ -9,21 +9,19 @@ function handleInput() {
   if (document.getElementById('input').value !== '') {
     const numberAsString = document.getElementById('input').value;
     const number = Number(numberAsString);
+    document.getElementById('answer').style.color = 'red'; // fail by default
 
     if (Number.isNaN(number)) {
       document.getElementById('answer').textContent = 'A valid number is required!';
-      document.getElementById('answer').style.color = 'red';
       document.getElementById('input').value = null;
     } else if (number < 0) {
       document.getElementById('answer').textContent = 'Negative numbers are not allowed!';
-      document.getElementById('answer').style.color = 'red';
       document.getElementById('input').value = null;
     } else if (isPalindrome(numberAsString)) {
       document.getElementById('answer').textContent = 'Yes. This is a palindrome!';
       document.getElementById('answer').style.color = 'green';
     } else {
       document.getElementById('answer').textContent = 'No, Try again.';
-      document.getElementById('answer').style.color = 'red';
     }
   }
 }

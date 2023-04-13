@@ -4,24 +4,37 @@ function isPalindrome(inputString) {
   return inputString === reversedString;
 }
 
+function resetInput() {
+  document.getElementById('input').value = null;
+}
+function setAnswerText(answerString) {
+  document.getElementById('answer').textContent = answerString;
+}
+function setAnswerPass() {
+  document.getElementById('answer').style.color = 'green';
+}
+function setAnswerFail() {
+  document.getElementById('answer').style.color = 'red';
+}
+
 function handleInput() {
   document.getElementById('answer').textContent = '';
   if (document.getElementById('input').value !== '') {
     const numberAsString = document.getElementById('input').value;
     const number = Number(numberAsString);
-    document.getElementById('answer').style.color = 'red'; // fail by default
+    setAnswerFail();
 
     if (Number.isNaN(number)) {
-      document.getElementById('answer').textContent = 'A valid number is required!';
-      document.getElementById('input').value = null;
+      setAnswerText('A valid number is required!');
+      resetInput();
     } else if (number < 0) {
-      document.getElementById('answer').textContent = 'Negative numbers are not allowed!';
-      document.getElementById('input').value = null;
+      setAnswerText('Negative numbers are not allowed!');
+      resetInput();
     } else if (isPalindrome(numberAsString)) {
-      document.getElementById('answer').textContent = 'Yes. This is a palindrome!';
-      document.getElementById('answer').style.color = 'green';
+      setAnswerText('Yes. This is a palindrome!');
+      setAnswerPass();
     } else {
-      document.getElementById('answer').textContent = 'No, Try again.';
+      setAnswerText('No, Try again.');
     }
   }
 }

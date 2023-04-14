@@ -40,8 +40,6 @@ function handleInput() {
 }
 
 function formatDocumentStyles() {
-  document.body.style.backgroundColor = 'blue';
-  document.getElementById('palindrome-card').style.backgroundColor = 'white';
   document.getElementById('palindrome-card').style.padding = '25px';
   document.getElementById('palindrome-card').overflow = 'auto';
   document.getElementById('palindrome-card').style.position = 'relative';

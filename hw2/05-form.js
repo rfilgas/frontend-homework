@@ -11,6 +11,7 @@ function logSubmit(event) {
   console.log('Operating Systems:', document.getElementById('operating-systems-check').checked);
   console.log('Full Stack:', document.getElementById('full-stack-check').checked);
   console.log('Anything Else:', document.getElementById('anything-else-box').value);
+  document.getElementById('form').reset();
   event.preventDefault();
 }
 

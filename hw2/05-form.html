@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
     <title>04 - Background</title>
     <link
       rel="stylesheet"
@@ -14,36 +14,36 @@
   <body class="bg-dark">
     <main>
       <div
-        class="container rounded bg-light mx-auto"
+        class="container rounded bg-light mx-auto w"
         style="max-width: 500px"
         id="form-container"
       >
         <form id="form">
-          <h1 style="margin-bottom: 20px; margin-top: 10px; text-align: center">
+          <h1 class="mb-3 mt-2 text-center">
             Exercise 05 - Form
           </h1>
-          <div class="form-group" style="margin-bottom: 10px">
+          <div class="form-group mb-2">
             <label
               for="input-full-name"
-              style="font-weight: bold; margin-bottom: 5px"
+              class="fw-bold mb-2"
               >Full Name:</label
             >
             <input type="text" class="form-control" id="input-full-name" />
           </div>
 
-          <div class="form-group" style="margin-bottom: 10px">
+          <div class="form-group mb-2">
             <label
               for="input-email"
-              style="font-weight: bold; margin-bottom: 5px"
+              class="fw-bold mb-2"
               >Email:</label
             >
             <input type="email" class="form-control" id="input-email" />
           </div>
 
-          <div class="form-group" style="margin-bottom: 15px">
+          <div class="form-group mb-3">
             <label
               for="registration-status"
-              style="font-weight: bold; margin-bottom: 5px"
+              class="mb-1 fw-bold"
               >Registration Status:</label
             >
             <select class="form-select" id="registration-status">
@@ -55,19 +55,17 @@
           </div>
 
           <div
-            class="form-group"
-            style="margin-bottom: 15px"
+            class="form-group mb-3"
             id="course-selection"
           >
-            <p style="font-weight: bold; margin-bottom: 5px">
+            <p class = "fw-bold mb-2">
               Have you taken any of the following courses?
             </p>
             <div class="form-check">
               <input
                 type="checkbox"
-                class="form-check-input"
+                class="form-check-input rounded-1 border-1"
                 id="programming-language-check"
-                style="border-radius: 2px; border-width: 2px"
               />
               <label class="form-check-label" for="programming-language-check"
                 >Programming Languages</label
@@ -77,9 +75,8 @@
             <div class="form-check">
               <input
                 type="checkbox"
-                class="form-check-input"
+                class="form-check-input rounded-1 border-1"
                 id="operating-systems-check"
-                style="border-radius: 2px; border-width: 2px"
               />
               <label class="form-check-label" for="operating-systems-check"
                 >Operating Systems</label
@@ -90,8 +87,7 @@
               <input
                 type="checkbox"
                 class="form-check-input"
-                id="full-stack-check"
-                style="border-radius: 2px; border-width: 2px"
+                id="full-stack-check rounded-1 border-1"
               />
               <label class="form-check-label" for="full-stack-check"
                 >Full Stack Web Development</label
@@ -99,10 +95,10 @@
             </div>
           </div>
 
-          <div class="form-group" style="margin-bottom: 25px">
+          <div class="form-group mb-3">
             <label
               for="anything-else-box"
-              style="font-weight: bold; margin-bottom: 5px"
+              class="mb-1 fw-bold"
               >Anything Else?</label
             >
             <textarea
@@ -112,17 +108,16 @@
             ></textarea>
           </div>
 
-          <div class="row flex-wrap g-1" style="margin-bottom: 10px">
+          <div class="row flex-wrap g-2 mb-2">
             <div class="col-6">
-              <button type="submit" class="btn btn-primary" style="width: 100%">
+              <button type="submit" class="btn btn-primary w-100">
                 Submit
               </button>
             </div>
             <div class="col-6">
               <button
                 type="reset"
-                class="btn btn-secondary"
-                style="width: 100%"
+                class="btn btn-secondary w-100"
               >
                 Reset
               </button>

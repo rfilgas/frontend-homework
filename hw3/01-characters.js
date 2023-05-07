@@ -16,25 +16,25 @@ async function addCharacters(characters) {
   characters.forEach((character) => {
     const img = document.createElement('img');
     img.src = character.imageUrl;
-    Object.assign(img.style, { width: '250px', height: '250px' });
+    Object.assign(img.style, { width: '175px', height: '200px' });
     img.alt = `Portrait of ${character.fullName}`;
 
     const personName = document.createElement('h2');
     personName.textContent = character.fullName;
     personName.className = 'mt-3 fw-bold text-center mx-auto w-75';
-    personName.style.fontSize = '28px';
+    personName.style.fontSize = '24px';
 
     const personTitle = document.createElement('h3');
     personTitle.textContent = character.title;
-    personTitle.className = 'mt-3 fw-bold text-center mx-auto w-75';
-    personTitle.style.fontSize = '20px';
+    personTitle.className = 'mt-1 fw-bold text-center mx-auto w-100';
+    personTitle.style.fontSize = '16px';
 
     const characterCard = document.createElement('div');
     characterCard.className = 'pt-2 justify-content-center mx-auto';
     Object.assign(characterCard.style, {
       textAlign: 'center',
-      width: '270px',
-      height: '410px',
+      width: '190px',
+      height: '330px',
       margin: '0px',
       padding: '0px',
     });
@@ -51,7 +51,10 @@ async function addCharacters(characters) {
     // Column
     const column = document.createElement('div');
     column.appendChild(characterCard);
-    column.className = 'col mt-5 mx-auto';
+    column.className = 'col mt-2 mx-0';
+    column.style.justifyContent = 'space-between';
+    column.style.paddingLeft = '0px';
+    column.style.paddingRight = '0px';
 
     const toInsert = document.getElementById('imageContainer');
     toInsert.appendChild(column);

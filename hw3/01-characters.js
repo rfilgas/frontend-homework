@@ -16,7 +16,7 @@ async function addCharacters(characters) {
   characters.forEach((character) => {
     const img = document.createElement('img');
     img.src = character.imageUrl;
-    Object.assign(img.style, { width: '175px', height: '200px' });
+    Object.assign(img.style, { width: '165px', height: '195px' });
     img.alt = `Portrait of ${character.fullName}`;
 
     const personName = document.createElement('h2');
@@ -34,8 +34,11 @@ async function addCharacters(characters) {
     Object.assign(characterCard.style, {
       textAlign: 'center',
       width: '190px',
-      height: '330px',
-      margin: '0px',
+      height: '340px',
+      marginBottom: '20px',
+      marginTop: '20px',
+      marginLeft: '0px',
+      marginRight: '0px',
       padding: '0px',
     });
     characterCard.append(img, personName, personTitle);

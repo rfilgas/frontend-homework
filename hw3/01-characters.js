@@ -30,11 +30,13 @@ async function addCharacters(characters) {
     personTitle.style.fontSize = '20px';
 
     const characterCard = document.createElement('div');
-    characterCard.className = 'pt-2 justify-content-center';
+    characterCard.className = 'pt-2 justify-content-center mx-auto';
     Object.assign(characterCard.style, {
       textAlign: 'center',
       width: '270px',
       height: '410px',
+      margin: '0px',
+      padding: '0px',
     });
     characterCard.append(img, personName, personTitle);
 
@@ -49,7 +51,7 @@ async function addCharacters(characters) {
     // Column
     const column = document.createElement('div');
     column.appendChild(characterCard);
-    column.className = 'col mt-5';
+    column.className = 'col mt-5 mx-auto';
 
     const toInsert = document.getElementById('imageContainer');
     toInsert.appendChild(column);

@@ -21,37 +21,18 @@ async function addCharacters(characters) {
 
     const personName = document.createElement('h2');
     personName.textContent = character.fullName;
-    personName.className = 'mt-3 fw-bold text-center mx-auto w-75';
+    personName.className = 'person-name mt-3 fw-bold text-center mx-auto w-75';
     personName.style.fontSize = '24px';
 
     const personTitle = document.createElement('h3');
     personTitle.textContent = character.title;
-    personTitle.className = 'mt-1 fw-bold text-center mx-auto w-100';
+    personTitle.className = 'person-title mt-1 fw-bold text-center mx-auto w-100';
     personTitle.style.fontSize = '16px';
 
     const characterCard = document.createElement('div');
-    characterCard.className = 'pt-2 justify-content-center mx-auto';
-    Object.assign(characterCard.style, {
-      textAlign: 'center',
-      width: '190px',
-      height: '340px',
-      marginBottom: '20px',
-      marginTop: '20px',
-      marginLeft: '0px',
-      marginRight: '0px',
-      padding: '0px',
-    });
+    characterCard.className = 'character-card pt-2 justify-content-center mx-auto';
     characterCard.append(img, personName, personTitle);
 
-    // Hover Behavior
-    characterCard.addEventListener('mouseenter', () => characterCard.style.setProperty('background-color', '#01435B'));
-    characterCard.addEventListener('mouseleave', () => characterCard.style.removeProperty('background-color'));
-    characterCard.addEventListener('mouseenter', () => personName.style.setProperty('color', 'white'));
-    characterCard.addEventListener('mouseleave', () => personName.style.removeProperty('color'));
-    characterCard.addEventListener('mouseenter', () => personTitle.style.setProperty('color', 'white'));
-    characterCard.addEventListener('mouseleave', () => personTitle.style.removeProperty('color'));
-
-    // Column
     const column = document.createElement('div');
     column.appendChild(characterCard);
     column.className = 'col mt-2 mx-0';
